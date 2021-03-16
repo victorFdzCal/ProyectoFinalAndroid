@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModificarEquipoActivity">
+
+    <EditText
+        android:id="@+id/edtNombreEquipoEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="236dp"
+        android:ems="10"
+        android:hint="Nombre del equipo"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtCiudadEquipoEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="ciudad"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edtNombreEquipoEdit"
+        app:layout_constraintStart_toStartOf="@+id/edtNombreEquipoEdit"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombreEquipoEdit" />
+
+    <EditText
+        android:id="@+id/edtFundacionEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Fundacion"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edtCiudadEquipoEdit"
+        app:layout_constraintStart_toStartOf="@+id/edtCiudadEquipoEdit"
+        app:layout_constraintTop_toBottomOf="@+id/edtCiudadEquipoEdit" />
+
+    <Button
+        android:id="@+id/btnEditEquipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="EDITAR"
+        android:onClick="editEquipo"
+        app:layout_constraintEnd_toEndOf="@+id/edtFundacionEdit"
+        app:layout_constraintStart_toStartOf="@+id/edtFundacionEdit"
+        app:layout_constraintTop_toBottomOf="@+id/edtFundacionEdit" />
+</androidx.constraintlayout.widget.ConstraintLayout>

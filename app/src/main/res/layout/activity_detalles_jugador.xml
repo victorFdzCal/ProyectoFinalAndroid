@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetallesJugadorActivity">
+
+    <ImageView
+        android:id="@+id/imgFotoDetallesJugador"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/jugador" />
+
+    <TextView
+        android:id="@+id/txtNombreJugadorDetalles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgFotoDetallesJugador"
+        app:layout_constraintStart_toStartOf="@+id/imgFotoDetallesJugador"
+        app:layout_constraintTop_toBottomOf="@+id/imgFotoDetallesJugador" />
+
+    <TextView
+        android:id="@+id/txtNacionalidadDJugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/txtNombreJugadorDetalles"
+        app:layout_constraintStart_toStartOf="@+id/txtNombreJugadorDetalles"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreJugadorDetalles" />
+
+    <TextView
+        android:id="@+id/txtEdadDJugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/txtNacionalidadDJugador"
+        app:layout_constraintStart_toStartOf="@+id/txtNacionalidadDJugador"
+        app:layout_constraintTop_toBottomOf="@+id/txtNacionalidadDJugador" />
+
+    <TextView
+        android:id="@+id/txtPosicionDJugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/txtEdadDJugador"
+        app:layout_constraintStart_toStartOf="@+id/txtEdadDJugador"
+        app:layout_constraintTop_toBottomOf="@+id/txtEdadDJugador" />
+
+    <TextView
+        android:id="@+id/txtEquipoDJugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/txtPosicionDJugador"
+        app:layout_constraintStart_toStartOf="@+id/txtPosicionDJugador"
+        app:layout_constraintTop_toBottomOf="@+id/txtPosicionDJugador" />
+
+    <Button
+        android:id="@+id/btnEditarJugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="EDITAR JUGADOR"
+        android:onClick="editarJugador"
+        app:layout_constraintEnd_toEndOf="@+id/txtEquipoDJugador"
+        app:layout_constraintStart_toStartOf="@+id/txtEquipoDJugador"
+        app:layout_constraintTop_toBottomOf="@+id/txtEquipoDJugador" />
+
+    <Button
+        android:id="@+id/btnBorrarJugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="BORRAR JUGADOR"
+        android:onClick="borrarJugador"
+        app:layout_constraintEnd_toEndOf="@+id/btnEditarJugador"
+        app:layout_constraintStart_toStartOf="@+id/btnEditarJugador"
+        app:layout_constraintTop_toBottomOf="@+id/btnEditarJugador" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

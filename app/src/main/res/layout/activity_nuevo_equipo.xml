@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NuevoEquipoActivity">
+
+    <EditText
+        android:id="@+id/edtNombreE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="196dp"
+        android:ems="10"
+        android:hint="Nombre del Equipo"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtCiudad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Ciudad"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edtNombreE"
+        app:layout_constraintStart_toStartOf="@+id/edtNombreE"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombreE" />
+
+    <EditText
+        android:id="@+id/edtFundacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Año de fundacion"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edtCiudad"
+        app:layout_constraintStart_toStartOf="@+id/edtCiudad"
+        app:layout_constraintTop_toBottomOf="@+id/edtCiudad" />
+
+    <Button
+        android:id="@+id/btnAddEquipo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Añadir Equipo"
+        android:onClick="nuevoEquipo"
+        app:layout_constraintEnd_toEndOf="@+id/edtFundacion"
+        app:layout_constraintStart_toStartOf="@+id/edtFundacion"
+        app:layout_constraintTop_toBottomOf="@+id/edtFundacion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
