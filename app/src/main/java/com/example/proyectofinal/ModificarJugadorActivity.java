@@ -2,7 +2,9 @@ package com.example.proyectofinal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -33,12 +35,14 @@ public class ModificarJugadorActivity extends AppCompatActivity {
         edtApellido = findViewById(R.id.edtApellidoJugadorEditar);
         edtEdad = findViewById(R.id.edtEdadJugadorEditar);
         edtPosicion = findViewById(R.id.edtPosicionJugadorEditar);
+        edtNacionalidad = findViewById(R.id.edtNacionalidadJugadorEditar);
         spEquipos = (Spinner) findViewById(R.id.spEquiposEditarJugador);
         ArrayList<Equipo> listaEquipos = EquipoController.obtenerEquipos();
         ArrayAdapter<Equipo> arrayAdapter = new ArrayAdapter<Equipo>(getApplicationContext(),R.layout.spinner_item,listaEquipos);
         arrayAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         spEquipos.setAdapter(arrayAdapter);
-        j = DetallesJugadorActivity.getJ();
+        Intent intent = getIntent();
+        j = (Jugador) intent.getSerializableExtra(DetallesJugadorActivity.EXTRA_OBJETO_JUGADOR);
         edtNombre.setText(j.getNombre());
         edtApellido.setText(j.getApellidos());
         edtPosicion.setText(j.getPosicion());

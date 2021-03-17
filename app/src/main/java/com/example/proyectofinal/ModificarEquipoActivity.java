@@ -13,6 +13,8 @@ import com.example.proyectofinal.clases.Equipo;
 import com.example.proyectofinal.clases.EquipoViewHolder;
 import com.example.proyectofinal.controladores.EquipoController;
 
+import static com.example.proyectofinal.DetallesEquiposActivity.EXTRA_OBJETO_EQUIPO;
+
 public class ModificarEquipoActivity extends AppCompatActivity {
 
     EditText edtNombre;
@@ -28,7 +30,7 @@ public class ModificarEquipoActivity extends AppCompatActivity {
         edtCiudad = findViewById(R.id.edtCiudadEquipoEdit);
         Intent intent = getIntent();
         if (intent != null){
-            e = DetallesEquiposActivity.getE();
+            e = (Equipo) intent.getSerializableExtra(EXTRA_OBJETO_EQUIPO);
             if (e != null){
                 edtNombre.setText(e.getNombre());
                 edtFundacion.setText(e.getFundacion());

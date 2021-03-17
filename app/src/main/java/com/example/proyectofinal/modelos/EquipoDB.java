@@ -114,7 +114,7 @@ public class EquipoDB {
         }
         Equipo equipoEncontrado = null;
         try {
-            String ordenSQL = "SELECT * FROM equipo WHERE idequipo like ?;";
+            String ordenSQL = "SELECT * FROM equipo WHERE idequipo = ?;";
             PreparedStatement pst = conexion.prepareStatement(ordenSQL);
             pst.setInt(1,idEquipo);
             ResultSet resultadoSQL = pst.executeQuery();

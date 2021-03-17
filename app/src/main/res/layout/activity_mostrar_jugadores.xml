@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MostrarJugadoresActivity">
+    tools:context=".MostrarJugadoresActivity"
+    android:background="@color/fondo">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvJugadores"
         android:layout_width="372dp"
-        android:layout_height="617dp"
+        android:layout_height="600dp"
         android:layout_marginTop="56dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
@@ -19,9 +20,10 @@
     <Button
         android:id="@+id/btnAddJugador"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="AÑADIR JUGADOR"
+        android:layout_height="40dp"
+        android:fontFamily="@font/choplinmedium"
         android:onClick="addJugador"
+        android:text="NUEVO JUGADOR"
         app:layout_constraintEnd_toEndOf="@+id/rvJugadores"
         app:layout_constraintStart_toStartOf="@+id/rvJugadores"
         app:layout_constraintTop_toBottomOf="@+id/rvJugadores" />
@@ -42,11 +44,11 @@
 
     <Button
         android:id="@+id/btnMostrarJugadores"
-        android:layout_width="69dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/search"
         android:onClick="mostrarJugadores"
-        android:text="BUSCAR"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/spEquiposMostrarJugadores"
         app:layout_constraintTop_toTopOf="parent" />

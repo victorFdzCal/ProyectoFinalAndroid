@@ -1,6 +1,8 @@
 package com.example.proyectofinal.clases;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -11,9 +13,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.proyectofinal.DetallesEquiposActivity;
 import com.example.proyectofinal.R;
 
+import java.io.ByteArrayOutputStream;
+
 public class EquipoViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    public static final String EXTRA_OBJETO_EQUIPO = "";
+    public static final String EXTRA_NOMBRE_EQUIPO = "a";
+    public static final String EXTRA_IMAGEN_ESCUDO = "b";
+    public static final String EXTRA_ID_EQUIPO = "c";
+    public static final String EXTRA_CIUDAD_EQUIPO = "d";
+    public static final String EXTRA_FUNDACION_EQUIPO = "e";
     public TextView txtRvNombreE = null;
     public TextView txtRvCiudadE = null;
     public TextView txtRvFundacionE = null;
@@ -34,10 +42,22 @@ public class EquipoViewHolder extends RecyclerView.ViewHolder implements View.On
     @Override
     public void onClick(View v) {
         int mPosition = getLayoutPosition();
-        Equipo equipo = this.leAdapter.getListaEquipos().get(mPosition);
-        leAdapter.notifyDataSetChanged();
         Intent intent = new Intent(leAdapter.getC(), DetallesEquiposActivity.class);
-        intent.putExtra(EXTRA_OBJETO_EQUIPO,equipo);
+        Equipo equipoObtenido = this.leAdapter.getListaEquipos().get(mPosition);
+        intent.putExtra(EXTRA_NOMBRE_EQUIPO,equipoObtenido.getNombre());
+        System.out.println(equipoObtenido.getNombre());
+        Log.i("Nombre",equipoObtenido.getNombre());
+        intent.putExtra(EXTRA_ID_EQUIPO, equipoObtenido.getIdEquipo());
+        intent.putExtra(EXTRA_CIUDAD_EQUIPO, equipoObtenido.getCiudad());
+        intent.putExtra(EXTRA_FUNDACION_EQUIPO, equipoObtenido.getFundacion());
+        Bitmap escudo = equipoObtenido.getEscudo();
+        if (escudo != null){
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            escudo.compress(Bitmap.CompressFormat.PNG,0,baos);
+            byte[] byteArrayEscudo = baos.toByteArray();
+            intent.putExtra(EXTRA_IMAGEN_ESCUDO,byteArrayEscudo);
+        }
+        leAdapter.notifyDataSetChanged();
         leAdapter.getC().startActivity(intent);
     }
 }

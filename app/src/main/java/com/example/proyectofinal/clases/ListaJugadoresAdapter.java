@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.proyectofinal.R;
+import com.example.proyectofinal.controladores.EquipoController;
 import com.example.proyectofinal.modelos.BaseDB;
 import com.example.proyectofinal.modelos.EquipoDB;
 
@@ -46,7 +47,7 @@ public class ListaJugadoresAdapter extends RecyclerView.Adapter<JugadorViewHolde
         holder.txtNombreJugador.setText(jugadorActual.getNombre() + " " + jugadorActual.getApellidos());
         holder.txtPosicion.setText("Posición: " + jugadorActual.getPosicion());
         holder.txtEdad.setText("Edad: " + jugadorActual.getEdad());
-        Equipo e = EquipoDB.buscarEquipo(jugadorActual.getIdEquipo());
+        Equipo e = EquipoController.cargarEquipo(jugadorActual.getIdEquipo());
         holder.txtEquipo.setText("Equipo: " + e.getNombre());
     }
 

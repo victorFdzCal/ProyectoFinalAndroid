@@ -6,6 +6,7 @@ import com.example.proyectofinal.clases.Equipo;
 import com.example.proyectofinal.tareas.TareaActualizarEquipo;
 import com.example.proyectofinal.tareas.TareaActualizarJugador;
 import com.example.proyectofinal.tareas.TareaBorrarEquipo;
+import com.example.proyectofinal.tareas.TareaCargarEquipos;
 import com.example.proyectofinal.tareas.TareaInsertarEquipo;
 import com.example.proyectofinal.tareas.TareaMostrarEquipos;
 import com.example.proyectofinal.tareas.TareaObtenerEquipos;
@@ -122,5 +123,24 @@ public class EquipoController {
             ex.printStackTrace();
         }
         return actualizadoOK;
+    }
+
+    public static Equipo cargarEquipo(int idEquipo){
+        Equipo equipo = null;
+        FutureTask t = new FutureTask(new TareaCargarEquipos(idEquipo));
+        ExecutorService es = Executors.newSingleThreadExecutor();
+        es.submit(t);
+        try {
+            equipo = (Equipo) t.get();
+            es.shutdown();
+            if(!es.awaitTermination(800, TimeUnit.MILLISECONDS)){
+                es.shutdownNow();
+            }
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return equipo;
     }
 }

@@ -4,5 +4,9 @@
     android:layout_height="wrap_content"
     android:id="@+id/txtNombreEquipoSpinner"
     android:layout_weight="1"
-    android:text="TextView" >
+    android:text="TextView"
+    android:textColor="@color/white"
+    android:textColorHint="@color/white"
+    android:fontFamily="@font/choplinextralight"
+    android:background="@color/fondo">
 </TextView>

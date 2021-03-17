@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MostrarEquiposActivity">
+    tools:context=".MostrarEquiposActivity"
+    android:background="@color/fondo">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvEquipos"
@@ -20,7 +21,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Añadir Equipo"
+        android:text="nuevo Equipo"
+        android:fontFamily="@font/choplinmedium"
         android:onClick="addEquipo"
         app:layout_constraintEnd_toEndOf="@+id/rvEquipos"
         app:layout_constraintStart_toStartOf="@+id/rvEquipos"

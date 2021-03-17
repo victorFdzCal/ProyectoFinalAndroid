@@ -32,12 +32,16 @@ public class MostrarJugadoresActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_jugadores);
-        rvJugadores = findViewById(R.id.rvJugadores);
+        rvJugadores = (RecyclerView) findViewById(R.id.rvJugadores);
         spEquipos = (Spinner) findViewById(R.id.spEquiposMostrarJugadores);
         ArrayList<Equipo> listaEquipos = EquipoController.obtenerEquipos();
         ArrayAdapter<Equipo> arrayAdapter = new ArrayAdapter<Equipo>(getApplicationContext(),R.layout.spinner_item,listaEquipos);
         arrayAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         spEquipos.setAdapter(arrayAdapter);
+        listaJugadores = JugadorController.obtenerJugadores();
+        ListaJugadoresAdapter mAdapter = new ListaJugadoresAdapter(this,listaJugadores);
+        rvJugadores.setAdapter(mAdapter);
+        rvJugadores.setLayoutManager(new LinearLayoutManager(this));
     }
 
     public void addJugador(View view) {

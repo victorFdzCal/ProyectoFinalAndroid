@@ -27,6 +27,8 @@ public class Equipo implements Serializable {
         this.nombre = nombre;
         this.ciudad = ciudad;
         this.fundacion = fundacion;
+        this.idEquipo = 0;
+        this.escudo = null;
     }
 
     public Equipo(int idEquipo, String nombreEquipo, String ciudad, String fundacion) {
@@ -34,6 +36,7 @@ public class Equipo implements Serializable {
         this.nombre = nombreEquipo;
         this.ciudad = ciudad;
         this.fundacion = fundacion;
+        this.escudo = null;
     }
 
     public int getIdEquipo() {

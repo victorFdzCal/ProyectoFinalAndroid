@@ -4,15 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/fondo">
 
     <Button
         android:id="@+id/btnEquipos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="272dp"
-        android:text="EQUIPOS"
         android:onClick="equipos"
+        android:text="EQUIPOS"
+        android:fontFamily="@font/choplinmedium"
+        android:background="@color/color3"
+        android:textColor="@color/color1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +28,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="JUGADORES"
+        android:fontFamily="@font/choplinmedium"
         android:onClick="jugadores"
+        android:background="@color/color3"
+        android:textColor="@color/color1"
         app:layout_constraintEnd_toEndOf="@+id/btnEquipos"
         app:layout_constraintStart_toStartOf="@+id/btnEquipos"
         app:layout_constraintTop_toBottomOf="@+id/btnEquipos" />

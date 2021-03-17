@@ -20,6 +20,7 @@ public class JugadorController {
         ArrayList<Jugador> jugadoresDevueltos = null;
         FutureTask t = new FutureTask(new TareaObtenerJugadores());
         ExecutorService es = Executors.newSingleThreadExecutor();
+        es.submit(t);
         try {
             jugadoresDevueltos = (ArrayList<Jugador>) t.get();
             es.shutdown();
@@ -95,6 +96,7 @@ public class JugadorController {
         ArrayList<Jugador> jugadoresDevueltos = null;
         FutureTask t = new FutureTask(new TareaCargarJugadores(idEquipo));
         ExecutorService es = Executors.newSingleThreadExecutor();
+        es.submit(t);
         try {
             jugadoresDevueltos = (ArrayList<Jugador>) t.get();
             es.shutdown();

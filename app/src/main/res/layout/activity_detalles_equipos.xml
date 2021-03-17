@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DetallesEquiposActivity">
+    tools:context=".DetallesEquiposActivity"
+    android:background="@color/fondo">
 
     <ImageView
         android:id="@+id/imgEscudoEquipo"
@@ -20,9 +21,11 @@
     <TextView
         android:id="@+id/txtNombreEquipo"
         android:layout_width="0dp"
+        android:fontFamily="@font/choplinmedium"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="TextView"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/imgEscudoEquipo"
         app:layout_constraintStart_toStartOf="@+id/imgEscudoEquipo"
@@ -34,6 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:fontFamily="@font/choplinextralight"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/txtNombreEquipo"
         app:layout_constraintStart_toStartOf="@+id/txtNombreEquipo"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreEquipo" />
@@ -44,6 +49,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:fontFamily="@font/choplinextralight"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/txtCiudadEquipo"
         app:layout_constraintStart_toStartOf="@+id/txtCiudadEquipo"
         app:layout_constraintTop_toBottomOf="@+id/txtCiudadEquipo" />
@@ -52,6 +59,7 @@
         android:id="@+id/btnEditarEquipo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/choplinmedium"
         android:layout_marginTop="16dp"
         android:text="EDITAR"
         android:onClick="editarEquipo"
@@ -64,6 +72,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/choplinmedium"
         android:text="BORRAR"
         android:onClick="borrarEquipo"
         app:layout_constraintEnd_toEndOf="@+id/btnEditarEquipo"

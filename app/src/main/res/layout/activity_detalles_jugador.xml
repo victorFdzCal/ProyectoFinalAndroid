@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetallesJugadorActivity">
+    tools:context=".DetallesJugadorActivity"
+    android:background="@color/fondo">
 
     <ImageView
         android:id="@+id/imgFotoDetallesJugador"
@@ -21,7 +22,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/choplinmedium"
         android:text="TextView"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/imgFotoDetallesJugador"
         app:layout_constraintStart_toStartOf="@+id/imgFotoDetallesJugador"
@@ -32,7 +35,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textColor="@color/white"
         android:text="TextView"
+        android:fontFamily="@font/choplinextralight"
         app:layout_constraintEnd_toEndOf="@+id/txtNombreJugadorDetalles"
         app:layout_constraintStart_toStartOf="@+id/txtNombreJugadorDetalles"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreJugadorDetalles" />
@@ -42,7 +47,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textColor="@color/white"
         android:text="TextView"
+        android:fontFamily="@font/choplinextralight"
         app:layout_constraintEnd_toEndOf="@+id/txtNacionalidadDJugador"
         app:layout_constraintStart_toStartOf="@+id/txtNacionalidadDJugador"
         app:layout_constraintTop_toBottomOf="@+id/txtNacionalidadDJugador" />
@@ -52,7 +59,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textColor="@color/white"
         android:text="TextView"
+        android:fontFamily="@font/choplinextralight"
         app:layout_constraintEnd_toEndOf="@+id/txtEdadDJugador"
         app:layout_constraintStart_toStartOf="@+id/txtEdadDJugador"
         app:layout_constraintTop_toBottomOf="@+id/txtEdadDJugador" />
@@ -62,7 +71,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textColor="@color/white"
         android:text="TextView"
+        android:fontFamily="@font/choplinextralight"
         app:layout_constraintEnd_toEndOf="@+id/txtPosicionDJugador"
         app:layout_constraintStart_toStartOf="@+id/txtPosicionDJugador"
         app:layout_constraintTop_toBottomOf="@+id/txtPosicionDJugador" />
@@ -74,6 +85,7 @@
         android:layout_marginTop="32dp"
         android:text="EDITAR JUGADOR"
         android:onClick="editarJugador"
+        android:fontFamily="@font/choplinextralight"
         app:layout_constraintEnd_toEndOf="@+id/txtEquipoDJugador"
         app:layout_constraintStart_toStartOf="@+id/txtEquipoDJugador"
         app:layout_constraintTop_toBottomOf="@+id/txtEquipoDJugador" />
@@ -84,6 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="BORRAR JUGADOR"
+        android:fontFamily="@font/choplinmedium"
         android:onClick="borrarJugador"
         app:layout_constraintEnd_toEndOf="@+id/btnEditarJugador"
         app:layout_constraintStart_toStartOf="@+id/btnEditarJugador"
